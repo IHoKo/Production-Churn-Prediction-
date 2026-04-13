@@ -1,0 +1,8 @@
+venv/
+.venv/
+.mplconfig/
+__pycache__/
+*.py[cod]
+artifacts/*.joblib
+artifacts/metrics.json
+eda_output/
