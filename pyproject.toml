@@ -1,0 +1,50 @@
+[project]
+name = "production-churn-prediction"
+version = "0.1.0"
+description = "End-to-end customer churn prediction with XGBoost, SHAP, and FastAPI."
+readme = "README.md"
+authors = [{ name = "IHoKo", email = "hsn.kor@gmail.com" }]
+requires-python = ">=3.11,<3.15"
+dependencies = [
+  "pandas>=2.0.0",
+  "numpy>=1.24.0",
+  "scikit-learn>=1.3.0",
+  "xgboost>=2.0.0",
+  "fastapi>=0.109.0",
+  "uvicorn[standard]>=0.27.0",
+  "pydantic>=2.0.0",
+  "shap>=0.44.0",
+  "joblib>=1.3.0",
+  "matplotlib>=3.7.0",
+  "seaborn>=0.13.0",
+  "scipy>=1.10.0",
+]
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.group.dev.dependencies]
+ruff = ">=0.15.0"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+exclude = [
+  ".git",
+  ".venv",
+  "__pycache__",
+  ".mplconfig",
+  "artifacts",
+  "eda_output",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[build-system]
+requires = ["poetry-core>=2.0.0"]
+build-backend = "poetry.core.masonry.api"
