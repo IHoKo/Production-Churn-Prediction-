@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .DS_Store
 __pycache__/
 *.py[cod]
@@ -6,4 +7,13 @@ __pycache__/
 .mplconfig/
 .ruff_cache/
 artifacts/
+=======
+venv/
+.venv/
+.mplconfig/
+__pycache__/
+*.py[cod]
+artifacts/*.joblib
+artifacts/metrics.json
+>>>>>>> a2172f138da0658922dab53058a07ebb056481c9
 eda_output/
