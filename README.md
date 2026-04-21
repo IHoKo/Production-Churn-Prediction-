@@ -17,12 +17,35 @@ End-to-end customer churn prediction on the IBM Telco dataset using XGBoost, wit
 - Optional SHAP top-feature explanations in API responses
 - EDA script that exports charts to `eda_output/`
 
+## Results (EDA Snapshots)
+
+### Churn Class Balance
+
+![Churn class balance](docs/images/01_churn_counts.png)
+
+### Tenure and Monthly Charges by Churn
+
+![Tenure and monthly charges by churn](docs/images/02_tenure_monthly_by_churn.png)
+
+### Contract vs Monthly Charges
+
+![Contract vs monthly charges](docs/images/03_contract_monthly_box.png)
+
+### Correlation Heatmap
+
+![Correlation heatmap](docs/images/04_correlation_heatmap.png)
+
+### Churn Rate by Category
+
+![Churn rate by category](docs/images/05_categorical_churn_rate.png)
+
 ## Project Structure
 
 - `train.py`: train/evaluate model and save artifacts
 - `api.py`: FastAPI app for serving predictions
 - `preprocess.py`: reusable preprocessing + engineered features
 - `eda.py`: generates EDA summaries and plots
+- `docs/images/`: README result images
 - `data/Telco-Customer-Churn.csv`: input dataset
 - `artifacts/`: saved model pipeline and metrics
 - `pyproject.toml`: dependency + tool configuration (source of truth)
@@ -78,4 +101,3 @@ poetry run uvicorn api:app --host 0.0.0.0 --port 8000
 poetry run ruff check . --fix
 poetry run ruff format .
 ```
-
